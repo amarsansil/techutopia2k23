@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-size: 30px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: 'VT323', monospace;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+ul {
+  overflow-x: visible;
+}
+/* .Collapsible__contentOuter{
+  overflow: visible !important;
+} */
+.bgVideo {
+
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.overlay {
+  background-color: #000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: +9999;
+  background: rgba(228, 228, 228, 0.822);
+  transform-origin: 0%;
+}
+
+.register {
+  background-color: white;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.circle {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.register-fee {
+  color: black;
+  transform: rotate(270deg);
+  font-weight: bolder;
+  border-bottom: 2px solid black;
+}
+
+.price>span {
+  font-weight: 500;
+  padding-left: 1px;
+  color: rgb(37, 37, 37);
+}
+
+.just {
+  stroke: red;
+  stroke-width: 3;
+  stroke-dasharray: 50, 750;
+  stroke-dashoffset: 0;
+  fill: none;
+  animation: border 5s linear infinite;
+}
+.card:before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0) linear-gradient(71.18deg, rgb(0, 34, 255) -27.32%, rgb(0, 34, 255) -16.39%, rgb(81, 121, 254) -7.38%, rgb(165, 237, 182) 30.59%, rgb(250, 232, 90) 46.06%, rgb(253, 172, 62) 62.61%, rgb(255, 92, 0) 75.82%) repeat scroll 0% 0%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: all 1.2s ease-in-out 0s;
+  clip-path: circle(0% at 35px 35px);
+}
+.card:after{
+  content: "";
+  position: absolute;
+  background-color: #000;
+  height: 93%;
+  width: 93%;
+  top: 3.5%;
+  left: 3.5%;
+  border-radius: 5px;
+}
+.card > *{
+  z-index: 30;
+}
+.card:hover::before {
+  animation: 1.2s ease-in-out 0s 1 normal forwards running circle-out;
+  animation-direction: reverse;
+  background-size: 100% 1px;
+}
+.card{
+  padding-inline: 0.2rem;
+}
+
+@keyframes circle-out{
+
+
+  0% {
+    clip-path: polygon(0% 0%, 0% 100%, 120% 100%, 100% 0%);
+  }
+  80% {
+    clip-path: polygon(0% 0%, 0% 100%, 30% 100%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  }
+  }
+
+span{
+  overflow-wrap: anywhere;
+}
